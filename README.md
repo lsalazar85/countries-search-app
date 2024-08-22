@@ -2,7 +2,7 @@
 Countries search with map pin. Web app developed in Next.js & Typescript
 
 ## Deployment app
-[https://rick-morty-next-app.vercel.app/](https://rick-morty-next-app.vercel.app/)
+[https://countries-search-app-on.vercel.app/](https://countries-search-app-on.vercel.app/)
 
 ## Run
 ```
