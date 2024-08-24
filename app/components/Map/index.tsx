@@ -4,36 +4,46 @@ import { useMap } from 'react-leaflet/hooks';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
-type MarkerProps = {
+type CombinedDataProps = {
+  name: string;
+  code: string;
+  capital: string;
+  emoji: string;
+  currency: string;
+  continent: { name: string };
+  languages: { name: string }[];
   latitude: number;
   longitude: number;
-  name: string;
 };
 
 type MapProps = {
-  markers?: MarkerProps[];
+  combinedData?: CombinedDataProps | null;
   zoom?: number;
-  latitude?: number;
-  longitude?: number;
-  countryName?: string;
 };
 
-const Map = ({ markers = [], zoom = 3, latitude, longitude, countryName }: MapProps) => {
+const Map = ({ combinedData, zoom = 3 }: MapProps) => {
+  const {
+    name,
+    capital,
+    emoji,
+    currency,
+    continent,
+    latitude = 0,
+    longitude = 0,
+  } = combinedData || {};
+
   const MapUpdater = () => {
     const map = useMap();
     useEffect(() => {
       if (typeof window !== 'undefined') {
         map.invalidateSize();
-        if (markers.length > 0) {
-          const bounds = L.latLngBounds(markers.map(({ latitude, longitude }) => [latitude, longitude]));
-          map.fitBounds(bounds, { padding: [50, 50], maxZoom: 4 });
-        } else if (latitude && longitude) {
+        if (combinedData) {
           map.setView([latitude, longitude], zoom);
         } else {
           map.setView([15, -90], zoom);
         }
       }
-    }, [markers, zoom, map, latitude, longitude]);
+    }, [combinedData, zoom, map]);
     return null;
   };
 
@@ -53,19 +63,27 @@ const Map = ({ markers = [], zoom = 3, latitude, longitude, countryName }: MapPr
           scrollWheelZoom={true}
           className="h-full w-full"
         >
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          {markers.map(({ latitude, longitude, name }, index) => (
-            <Marker key={index} position={[latitude, longitude]} icon={customIcon}>
+          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          {combinedData && (
+            <Marker position={[latitude, longitude]} icon={customIcon}>
               <Popup>
-                <div className="flex flex-col text-center">
-                  <span>{name}</span>
-                  <span>{`${latitude}, ${longitude}`}</span>
+                <div className="flex flex-col text-center text-[0.65rem] font-poppins">
+                  <span>{`${name} ${emoji}`}</span>
+                  <span>
+                    <span className="font-bold mr-0.5">Capital:</span> {capital}
+                  </span>
+                  <span>
+                    <span className="font-bold mr-0.5">Currency:</span>
+                    {currency}
+                  </span>
+                  <span>
+                    <span className="font-bold mr-0.5">Region:</span>
+                    {continent?.name}
+                  </span>
                 </div>
               </Popup>
             </Marker>
-          ))}
+          )}
           <MapUpdater />
         </MapContainer>
       )}
