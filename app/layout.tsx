@@ -1,17 +1,18 @@
-import { ReactNode } from "react";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { ReactNode } from 'react';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-import Footer from "./components/UI/Footer";
+import Footer from '@/app/components/Footer';
+import Header from '@/app/components/Header';
 
-import "./globals.css";
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Countries App",
+  title: 'Countries App',
   description:
-    "Countries search with map pin. Web app developed in Next.js & Typescript",
+    'Countries search with map pin. Web app developed in Next.js & Typescript',
 };
 
 export default function RootLayout({
@@ -22,9 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={`h-full ${inter.className} flex flex-col`}>
-        <main className="flex-1 flex flex-col">
-          {children}
-        </main>
+        <Header />
+        <main className="flex-1 flex flex-col mt-16">{children}</main>
         <Footer />
       </body>
     </html>

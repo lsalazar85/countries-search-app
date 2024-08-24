@@ -1,12 +1,12 @@
-import Link from "next/link";
-import { SiNextdotjs } from "react-icons/si";
-import { FaCode } from "react-icons/fa";
+import Link from 'next/link';
+import { SiNextdotjs } from 'react-icons/si';
+import { FaCode } from 'react-icons/fa';
 
 const Footer = () => (
-  <footer className="xs:hidden lg:flex items-center justify-center text-[0.688rem] py-[1rem] font-poppins mt-auto">
+  <footer className="flex items-center justify-center text-[0.688rem] text-primary py-[1rem] font-poppins mt-auto">
     <span>Take a look at the code for this project.</span>
     <Link
-      href="https://github.com/lsalazar85/countries-app"
+      href="https://github.com/lsalazar85/countries-search-app"
       className="flex gap-1 ml-[0.5rem] text-[1rem] cursor-pointer"
       target="_blank"
     >
