@@ -7,6 +7,9 @@ export const COUNTRY_FIELDS = gql`
     native
     capital
     emoji
+    continent {
+      name
+    }
     currency
     languages {
       code

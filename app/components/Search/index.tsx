@@ -4,13 +4,14 @@ import { useLazyQuery } from '@apollo/client';
 import client from '@/app/apollo-client';
 import { GET_COUNTRY } from '@/app/graphql/queries/getCountry';
 
-import CardMap from '@/app/components/CardMap';
 import Input from '@/app/components/UI/Form/Input';
 import Button from '@/app/components/UI/Button';
+const DynamicMap = dynamic(() => import('@/app/components/Map'), { ssr: false });
 
 import countries from '@/app/common/countries.json';
 import debounce from '@/app/utils/debounce';
 import { CountryProps, CountryDataProps } from '@/app/interfaces';
+import dynamic from 'next/dynamic';
 
 const Search = () => {
   const [query, setQuery] = useState<string>('');
@@ -47,21 +48,16 @@ const Search = () => {
       (c: CountryDataProps) =>
         c.Country?.toLowerCase() === countryData.name?.toLowerCase() ||
         c['ISO Code']?.toLowerCase() === countryData.code?.toLowerCase() ||
-        c.Region?.toLowerCase().includes(countryData.continent?.toLowerCase()),
+        (typeof countryData.continent === 'string' && c.Region?.toLowerCase().includes(countryData.continent?.toLowerCase())),
     );
 
     setCombinedData(
       country
         ? {
-            name: countryData.name,
-            code: countryData.code,
-            capital: countryData.capital,
-            emoji: countryData.emoji,
-            currency: countryData.currency,
-            languages: countryData.languages,
-            latitude: country.Latitude,
-            longitude: country.Longitude,
-          }
+          ...countryData,
+          latitude: country.Latitude,
+          longitude: country.Longitude,
+        }
         : null,
     );
   }, [data]);
@@ -73,7 +69,7 @@ const Search = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-4">
+    <div className="w-full flex flex-col items-center p-4">
       <div className="mb-4">
         <Input
           value={query}
@@ -85,10 +81,9 @@ const Search = () => {
         />
         <Button onClick={handleClear} content="Clear" />
       </div>
-      {loading && <div className="dots" />}
-      {combinedData && !loading && <CardMap data={combinedData} />}
+      <DynamicMap combinedData={combinedData} />
       {!combinedData && !loading && searchPerformed && (
-        <p className="text-[0.8rem]">No data found for the search query.</p>
+        <p className="text-[0.8rem] mt-[2rem]">No data found for the search query.</p>
       )}
       {error && <p>Error: {error.message}</p>}
     </div>

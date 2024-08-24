@@ -6,6 +6,7 @@ export interface CountryProps {
   capital: string;
   emoji: string;
   currency: string;
+  continent: { name: string };
   languages: { name: string }[];
   latitude: number;
   longitude: number;
