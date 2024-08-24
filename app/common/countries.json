@@ -1,80 +1,247 @@
 [
   {
-    "Country": "United States",
-    "ISO Code": "US",
-    "Latitude": 37.0902,
-    "Longitude": -95.5022
-  },
-  {
-    "Country": "Canada",
-    "ISO Code": "CA",
-    "Latitude": 53.0,
-    "Longitude": -123.0
-  },
-  {
-    "Country": "Mexico",
-    "ISO Code": "MX",
-    "Latitude": 23.0,
-    "Longitude": -102.0
-  },
-  {
-    "Country": "Brazil",
-    "ISO Code": "BR",
-    "Latitude": -23.0,
-    "Longitude": -55.0
+    "Country": "Antigua and Barbuda",
+    "ISO Code": "AG",
+    "Region": "Caribbean",
+    "Latitude": 17.05,
+    "Longitude": -61.8
   },
   {
     "Country": "Argentina",
     "ISO Code": "AR",
+    "Region": "South America",
     "Latitude": -32.0,
     "Longitude": -68.0
   },
   {
+    "Country": "Bahamas",
+    "ISO Code": "BS",
+    "Region": "Caribbean",
+    "Latitude": 24.25,
+    "Longitude": -76.0
+  },
+  {
+    "Country": "Barbados",
+    "ISO Code": "BB",
+    "Region": "Caribbean",
+    "Latitude": 13.1667,
+    "Longitude": -59.5333
+  },
+  {
+    "Country": "Belize",
+    "ISO Code": "BZ",
+    "Region": "Central America",
+    "Latitude": 17.5,
+    "Longitude": -88.75
+  },
+  {
+    "Country": "Bolivia",
+    "ISO Code": "BO",
+    "Region": "South America",
+    "Latitude": -16.0,
+    "Longitude": -64.0
+  },
+  {
+    "Country": "Brazil",
+    "ISO Code": "BR",
+    "Region": "South America",
+    "Latitude": -23.0,
+    "Longitude": -55.0
+  },
+  {
+    "Country": "Canada",
+    "ISO Code": "CA",
+    "Region": "North America",
+    "Latitude": 53.0,
+    "Longitude": -123.0
+  },
+  {
     "Country": "Chile",
     "ISO Code": "CL",
+    "Region": "South America",
     "Latitude": -33.0,
     "Longitude": -70.0
   },
   {
     "Country": "Colombia",
     "ISO Code": "CO",
+    "Region": "South America",
     "Latitude": 10.0,
     "Longitude": -72.0
   },
   {
-    "Country": "Peru",
-    "ISO Code": "PE",
-    "Latitude": -12.0,
-    "Longitude": -77.0
+    "Country": "Costa Rica",
+    "ISO Code": "CR",
+    "Region": "Central America",
+    "Latitude": 10.0,
+    "Longitude": -84.0
+  },
+  {
+    "Country": "Cuba",
+    "ISO Code": "CU",
+    "Region": "Caribbean",
+    "Latitude": 21.5,
+    "Longitude": -80.0
+  },
+  {
+    "Country": "Dominica",
+    "ISO Code": "DM",
+    "Region": "Caribbean",
+    "Latitude": 15.3,
+    "Longitude": -61.4
+  },
+  {
+    "Country": "Dominican Republic",
+    "ISO Code": "DO",
+    "Region": "Caribbean",
+    "Latitude": 19.0,
+    "Longitude": -70.67
   },
   {
     "Country": "Ecuador",
     "ISO Code": "EC",
+    "Region": "South America",
     "Latitude": -1.0,
     "Longitude": -79.0
   },
   {
-    "Country": "Venezuela",
-    "ISO Code": "VE",
-    "Latitude": 7.0,
-    "Longitude": -66.0
+    "Country": "El Salvador",
+    "ISO Code": "SV",
+    "Region": "Central America",
+    "Latitude": 13.0,
+    "Longitude": -88.0
+  },
+  {
+    "Country": "Grenada",
+    "ISO Code": "GD",
+    "Region": "Caribbean",
+    "Latitude": 12.1167,
+    "Longitude": -61.6667
+  },
+  {
+    "Country": "Guatemala",
+    "ISO Code": "GT",
+    "Region": "Central America",
+    "Latitude": 15.5,
+    "Longitude": -90.25
   },
   {
     "Country": "Guyana",
     "ISO Code": "GY",
+    "Region": "South America",
     "Latitude": 6.0,
     "Longitude": -58.0
   },
   {
+    "Country": "Haiti",
+    "ISO Code": "HT",
+    "Region": "Caribbean",
+    "Latitude": 19.0,
+    "Longitude": -72.5
+  },
+  {
+    "Country": "Honduras",
+    "ISO Code": "HN",
+    "Region": "Central America",
+    "Latitude": 15.0,
+    "Longitude": -86.0
+  },
+  {
+    "Country": "Jamaica",
+    "ISO Code": "JM",
+    "Region": "Caribbean",
+    "Latitude": 18.0,
+    "Longitude": -77.5
+  },
+  {
+    "Country": "Mexico",
+    "ISO Code": "MX",
+    "Region": "North America",
+    "Latitude": 23.0,
+    "Longitude": -102.0
+  },
+  {
+    "Country": "Nicaragua",
+    "ISO Code": "NI",
+    "Region": "Central America",
+    "Latitude": 13.0,
+    "Longitude": -85.0
+  },
+  {
+    "Country": "Panama",
+    "ISO Code": "PA",
+    "Region": "Central America",
+    "Latitude": 8.0,
+    "Longitude": -80.0
+  },
+  {
+    "Country": "Paraguay",
+    "ISO Code": "PY",
+    "Region": "South America",
+    "Latitude": -23.0,
+    "Longitude": -58.0
+  },
+  {
+    "Country": "Peru",
+    "ISO Code": "PE",
+    "Region": "South America",
+    "Latitude": -12.0,
+    "Longitude": -77.0
+  },
+  {
+    "Country": "Saint Kitts and Nevis",
+    "ISO Code": "KN",
+    "Region": "Caribbean",
+    "Latitude": 17.3333,
+    "Longitude": -62.75
+  },
+  {
+    "Country": "Saint Lucia",
+    "ISO Code": "LC",
+    "Region": "Caribbean",
+    "Latitude": 13.8833,
+    "Longitude": -60.9667
+  },
+  {
+    "Country": "Saint Vincent and the Grenadines",
+    "ISO Code": "VC",
+    "Region": "Caribbean",
+    "Latitude": 13.25,
+    "Longitude": -61.2
+  },
+  {
     "Country": "Suriname",
     "ISO Code": "SR",
+    "Region": "South America",
     "Latitude": 6.0,
     "Longitude": -55.0
   },
   {
-    "Country": "French Guiana",
-    "ISO Code": "GF",
-    "Latitude": 4.0,
-    "Longitude": -53.0
+    "Country": "Trinidad and Tobago",
+    "ISO Code": "TT",
+    "Region": "Caribbean",
+    "Latitude": 10.6667,
+    "Longitude": -61.5167
+  },
+  {
+    "Country": "United States",
+    "ISO Code": "US",
+    "Region": "North America",
+    "Latitude": 37.0902,
+    "Longitude": -95.5022
+  },
+  {
+    "Country": "Uruguay",
+    "ISO Code": "UY",
+    "Region": "South America",
+    "Latitude": -34.0,
+    "Longitude": -56.0
+  },
+  {
+    "Country": "Venezuela",
+    "ISO Code": "VE",
+    "Region": "South America",
+    "Latitude": 7.0,
+    "Longitude": -66.0
   }
 ]
