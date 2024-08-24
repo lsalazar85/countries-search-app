@@ -76,5 +76,137 @@
     "ISO Code": "GF",
     "Latitude": 4.0,
     "Longitude": -53.0
+  },
+  {
+    "Country": "Paraguay",
+    "ISO Code": "PY",
+    "Latitude": -23.0,
+    "Longitude": -58.0
+  },
+  {
+    "Country": "Uruguay",
+    "ISO Code": "UY",
+    "Latitude": -34.0,
+    "Longitude": -56.0
+  },
+  {
+    "Country": "Bolivia",
+    "ISO Code": "BO",
+    "Latitude": -16.0,
+    "Longitude": -64.0
+  },
+  {
+    "Country": "Panama",
+    "ISO Code": "PA",
+    "Latitude": 8.0,
+    "Longitude": -80.0
+  },
+  {
+    "Country": "Costa Rica",
+    "ISO Code": "CR",
+    "Latitude": 10.0,
+    "Longitude": -84.0
+  },
+  {
+    "Country": "Nicaragua",
+    "ISO Code": "NI",
+    "Latitude": 13.0,
+    "Longitude": -85.0
+  },
+  {
+    "Country": "Honduras",
+    "ISO Code": "HN",
+    "Latitude": 15.0,
+    "Longitude": -86.0
+  },
+  {
+    "Country": "El Salvador",
+    "ISO Code": "SV",
+    "Latitude": 13.0,
+    "Longitude": -88.0
+  },
+  {
+    "Country": "Guatemala",
+    "ISO Code": "GT",
+    "Latitude": 15.5,
+    "Longitude": -90.25
+  },
+  {
+    "Country": "Belize",
+    "ISO Code": "BZ",
+    "Latitude": 17.5,
+    "Longitude": -88.75
+  },
+  {
+    "Country": "Cuba",
+    "ISO Code": "CU",
+    "Latitude": 21.5,
+    "Longitude": -80.0
+  },
+  {
+    "Country": "Haiti",
+    "ISO Code": "HT",
+    "Latitude": 19.0,
+    "Longitude": -72.5
+  },
+  {
+    "Country": "Dominican Republic",
+    "ISO Code": "DO",
+    "Latitude": 19.0,
+    "Longitude": -70.67
+  },
+  {
+    "Country": "Jamaica",
+    "ISO Code": "JM",
+    "Latitude": 18.0,
+    "Longitude": -77.5
+  },
+  {
+    "Country": "Bahamas",
+    "ISO Code": "BS",
+    "Latitude": 24.25,
+    "Longitude": -76.0
+  },
+  {
+    "Country": "Barbados",
+    "ISO Code": "BB",
+    "Latitude": 13.1667,
+    "Longitude": -59.5333
+  },
+  {
+    "Country": "Saint Lucia",
+    "ISO Code": "LC",
+    "Latitude": 13.8833,
+    "Longitude": -60.9667
+  },
+  {
+    "Country": "Saint Vincent and the Grenadines",
+    "ISO Code": "VC",
+    "Latitude": 13.25,
+    "Longitude": -61.2
+  },
+  {
+    "Country": "Grenada",
+    "ISO Code": "GD",
+    "Latitude": 12.1167,
+    "Longitude": -61.6667
+  },
+  {
+    "Country": "Trinidad and Tobago",
+    "ISO Code": "TT",
+    "Latitude": 10.6667,
+    "Longitude": -61.5167
+  },
+  {
+    "Country": "Antigua and Barbuda",
+    "ISO Code": "AG",
+    "Latitude": 17.05,
+    "Longitude": -61.8
+  },
+  {
+    "Country": "Saint Kitts and Nevis",
+    "ISO Code": "KN",
+    "Latitude": 17.3333,
+    "Longitude": -62.75
   }
 ]
