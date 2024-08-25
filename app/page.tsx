@@ -8,7 +8,7 @@ const Page = () => {
     <section className="flex flex-col flex-1 w-full items-center justify-center lg:pt-[1.5rem]">
       <div className="mb-[1.5rem]">
         <Title>Discover the Americas</Title>
-        <Subtitle>You can search by country name, code, or continent 🌎</Subtitle>
+        <Subtitle>You can search by country name, code, or region. 🌎</Subtitle>
       </div>
       <Search />
     </section>
