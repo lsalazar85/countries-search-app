@@ -1,4 +1,3 @@
-'use client';
 import { TitleProps } from '@/app/interfaces';
 
 const Title = ({ children }: TitleProps) => (
