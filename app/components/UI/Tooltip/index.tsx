@@ -11,7 +11,7 @@ const Tooltip = ({ text, children }: TooltipProps) => {
         {children}
       </div>
       {isVisible && (
-        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 text-xs rounded py-6 px-4 bg-stone-200 text-black">
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 text-xs rounded py-6 px-4 bg-stone-200 text-black z-50">
           {text}
           <button
             onClick={() => setIsVisible(false)}
