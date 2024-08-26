@@ -5,13 +5,9 @@ const debounce = <T extends (...args: any[]) => void>(
   let timeout: number | undefined;
 
   return (...args: Parameters<T>) => {
-    if (typeof window === 'undefined') {
-      return;
-    }
-    if (timeout !== undefined) {
-      clearTimeout(timeout);
-    }
-    timeout = window.setTimeout(() => func.apply(this, args), wait);
+    if (typeof window === 'undefined') return;
+    if (timeout) clearTimeout(timeout);
+    timeout = window.setTimeout(() => func(...args), wait);
   };
 };
 

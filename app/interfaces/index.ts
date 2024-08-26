@@ -12,20 +12,10 @@ export interface CountryProps {
   longitude: number;
 }
 
-export interface CardMapProps {
-  data: CountryProps;
-}
-
 export interface InputProps {
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
-}
-
-export interface CountryDataProps {
-  Country: string;
-  'ISO Code': string;
-  Region: string;
 }
 
 export interface TitleProps {
@@ -33,6 +23,12 @@ export interface TitleProps {
 }
 
 export interface ButtonProps {
-  onClick: () => void;
+  onClick?: () => void | undefined;
   content: string;
+  styles?: string;
+}
+
+export interface TooltipProps {
+  text: string;
+  children: ReactNode;
 }

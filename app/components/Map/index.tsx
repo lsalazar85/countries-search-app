@@ -5,22 +5,7 @@ import L from 'leaflet';
 
 import 'leaflet/dist/leaflet.css';
 
-type CombinedDataProps = {
-  name: string;
-  code: string;
-  capital: string;
-  emoji: string;
-  currency: string;
-  continent: { name: string };
-  languages: { name: string }[];
-  latitude: number;
-  longitude: number;
-};
-
-type MapProps = {
-  combinedData?: CombinedDataProps[] | null;
-  zoom?: number;
-};
+import { MapProps } from '@/app/types';
 
 const Map = ({ combinedData, zoom = 4.2 }: MapProps) => {
   // Component to update the map view based on the combined data
@@ -29,7 +14,7 @@ const Map = ({ combinedData, zoom = 4.2 }: MapProps) => {
     useEffect(() => {
       if (typeof window !== 'undefined') {
         map.invalidateSize();
-        if (combinedData && combinedData.length > 0) {
+        if (combinedData?.length) {
           const bounds = L.latLngBounds(
             combinedData.map(({ latitude, longitude }) => [
               latitude,
@@ -59,41 +44,39 @@ const Map = ({ combinedData, zoom = 4.2 }: MapProps) => {
         <MapContainer
           center={[15, -90]}
           zoom={zoom}
-          scrollWheelZoom={true}
+          scrollWheelZoom
           className="h-full w-full"
         >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-          {/* Render markers for each country in the combined data */}
-          {combinedData &&
-            combinedData.map(
-              (data, index) =>
-                data.latitude !== undefined &&
-                data.longitude !== undefined && (
-                  <Marker
-                    key={index}
-                    position={[data.latitude, data.longitude]}
-                    icon={customIcon}
-                  >
-                    <Popup>
-                      <div className="flex flex-col text-center text-[0.65rem] font-poppins">
-                        <span>{`${data.name} ${data.emoji}`}</span>
-                        <span>
-                          <span className="font-bold mr-0.5">Capital:</span>{' '}
-                          {data.capital}
-                        </span>
-                        <span>
-                          <span className="font-bold mr-0.5">Currency:</span>
-                          {data.currency}
-                        </span>
-                        <span>
-                          <span className="font-bold mr-0.5">Region:</span>
-                          {data.continent?.name}
-                        </span>
-                      </div>
-                    </Popup>
-                  </Marker>
-                ),
-            )}
+          {combinedData?.map(
+            (data, index) =>
+              data.latitude !== undefined &&
+              data.longitude !== undefined && (
+                <Marker
+                  key={index}
+                  position={[data.latitude, data.longitude]}
+                  icon={customIcon}
+                >
+                  <Popup>
+                    <div className="flex flex-col text-center text-[0.65rem] font-poppins">
+                      <span>{`${data.name} ${data.emoji}`}</span>
+                      <span>
+                        <span className="font-bold mr-0.5">Capital:</span>{' '}
+                        {data.capital}
+                      </span>
+                      <span>
+                        <span className="font-bold mr-0.5">Currency:</span>{' '}
+                        {data.currency}
+                      </span>
+                      <span>
+                        <span className="font-bold mr-0.5">Region:</span>{' '}
+                        {data.continent?.name}
+                      </span>
+                    </div>
+                  </Popup>
+                </Marker>
+              ),
+          )}
           <MapUpdater />
         </MapContainer>
       )}
