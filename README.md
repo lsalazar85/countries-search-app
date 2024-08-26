@@ -32,9 +32,3 @@ Starts on `http://localhost:3000`
 ```
 
 ## Development technologies and external packages
-* Next.js
-* Typescript
-* GraphQL
-* Leaflet Map
-* Tailwind
-* React Icons
